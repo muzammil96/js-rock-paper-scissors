@@ -1,4 +1,6 @@
 const section = document.querySelector('section');
+const btn = document.querySelector('#startBtn');
+btn.addEventListener('click', game);
 
 function computerPlay() {
   let options = ['Rock', 'Paper', 'Scissors'];
@@ -21,7 +23,7 @@ function playRound(playerChoses, computerChoses) {
       }
     } else if (playerSelection === 'paper') {
       if (computerSelection === 'rock') {
-        return 'Computer wins';
+        return 'Player wins';
       }
       if (computerSelection === 'scissors') {
         return 'Computer wins';
