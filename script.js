@@ -1,5 +1,4 @@
 const section = document.querySelector('section');
-const btn = document.querySelector('#startBtn');
 const resultDiv = document.querySelector('#results');
 
 const options = document.querySelectorAll('.options div');
