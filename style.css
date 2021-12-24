@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: beige;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 960px;
+  height: 100%;
+}
+
+.hr {
+  border: 1px solid rgb(216, 189, 149);
+  width: 90%;
+}
+
+h1 {
+  font-weight: bold;
+  text-align: center;
+  color: brown;
+  margin-bottom: 15px;
+}
+
+main {
+  max-width: 500px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 25px;
+  color: rgb(202, 136, 49);
+}
+
+.options {
+  margin: 40px auto;
+  display: flex;
+}
+
+.options img {
+  width: 120px;
+  height: 80px;
+}
+
+/* .options .scissors img {
+  height: 100px;
+} */
+
+.options div:last-child {
+  margin-right: 0px;
+}
+
+.options div {
+  border: 1px solid burlywood;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 15px;
+  border-radius: 10px;
+  touch-action: manipulation;
+}
+
+.options div:hover {
+  box-shadow: 0px 5px 8px 1px burlywood;
+  cursor: pointer;
+}
+
+.options p {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+#results {
+  text-align: center;
+  font-weight: bold;
+  padding: 20px 40px;
+}
+
+.footer {
+  width: 80%;
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px solid rgb(216, 189, 149);
+}
+
+@media only screen and (max-width: 576px) {
+  .options img {
+    width: 50px;
+    height: 100px;
+  }
+
+  .options div {
+    padding: 10px 30px 20px 30px;
+    width: 130px;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .options img {
+    width: 30px;
+    height: 80px;
+  }
+
+  .options div {
+    padding: 10px 30px 20px 30px;
+    width: 100px;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+}

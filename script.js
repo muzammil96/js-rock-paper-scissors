@@ -1,6 +1,17 @@
 const section = document.querySelector('section');
 const btn = document.querySelector('#startBtn');
-btn.addEventListener('click', game);
+const resultDiv = document.querySelector('#results');
+
+const options = document.querySelectorAll('.options div');
+options.forEach((option) =>
+  option.addEventListener('click', () => {
+    let winner = playRound(
+      option.textContent.trim().toLowerCase(),
+      computerPlay()
+    );
+    resultDiv.innerHTML += winner;
+  })
+);
 
 function computerPlay() {
   let options = ['Rock', 'Paper', 'Scissors'];
@@ -10,30 +21,31 @@ function computerPlay() {
 function playRound(playerChoses, computerChoses) {
   let playerSelection = playerChoses.toLowerCase();
   let computerSelection = computerChoses.toLowerCase();
-
+  resultDiv.innerHTML = '';
+  resultDiv.innerHTML += `Computer chose ${computerSelection}, Player chose ${playerSelection}<br />`;
   if (playerSelection === computerSelection) {
     return 'Its a draw!';
   } else {
     if (playerSelection === 'rock') {
       if (computerSelection === 'paper') {
-        return 'Computer wins';
+        return 'Computer wins!';
       }
       if (computerSelection === 'scissors') {
-        return 'Player wins';
+        return 'Player wins!';
       }
     } else if (playerSelection === 'paper') {
       if (computerSelection === 'rock') {
-        return 'Player wins';
+        return 'Player wins!';
       }
       if (computerSelection === 'scissors') {
-        return 'Computer wins';
+        return 'Computer wins!';
       }
     } else {
       if (computerSelection === 'rock') {
-        return 'Computer wins';
+        return 'Computer wins!';
       }
       if (computerSelection === 'paper') {
-        return 'Player wins';
+        return 'Player wins!';
       }
     }
   }
